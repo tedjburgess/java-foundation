@@ -13,18 +13,22 @@ public class Users {
     
     public void displayUsers() {
         
+        int userNumber = 1;
         for (User userData : userList) {
             if (userData.name == null) {
                 continue;
             }
-            System.out.println("Users: ");
+            System.out.println("User " + userNumber + ":");
             System.out.println(userData.name);
             System.out.println(userData.age);
-            System.out.println(userData.hometown);
+            System.out.println(userData.hometown + "\n");
+            userNumber += 1;
         }
         
         return;
     }
+
+    
 
      
 }
