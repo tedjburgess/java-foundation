@@ -1,31 +1,49 @@
 import java.util.Scanner;
 
 public class Menu {
+
     public static void main(String[] args) {
-        //Prints user menu
-        System.out.println("Menu: \n"
-            + "1. Add users\n"
-            + "2. List users\n"
-            + "3. Find users\n"
-        );
-        //Create a scanner object
-        System.out.print("Enter choice: ");
+        User user = new User(null, 0, null);
+        Users userList = new Users();
+
+        // Create a scanner object
+
         Scanner sc = new Scanner(System.in);
-        //Use scanner object to read user input
-        int userChoice = sc.nextInt();
+        // Use scanner object to read user input
+        String userChoice = "";
         // Execute input
-        switch (userChoice) {
-            case 1:
-                //addUsers();
-                break;
-            case 2:
-                //listUsers();
-                break;
-            case 3:
-                //findUsers();
-                break;
-            default:
-                break;
+        while (userChoice != "x") {
+            // Prints user menu
+            System.out.println("Menu: \n"
+                    + "1. Add users\n"
+                    + "2. List users\n"
+                    + "3. Find users\n");
+            System.out.print("Enter choice: ");
+            userChoice = sc.nextLine();
+
+            switch (userChoice) {
+                
+                case "1":
+                    System.out.print("Enter name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter age: ");
+                    int age = Integer.parseInt(sc.nextLine());
+                    System.out.print("Enter hometown: ");
+                    String town = sc.nextLine();
+                    user = new User(name, age, town);
+                    userList.addUser(user);
+                    break;
+                    
+                case "2":
+                    userList.displayUsers();
+                    break;
+                case "3":
+                    // findUsers();
+                    break;
+                default:
+                    break;
+            }
         }
     }
+
 }

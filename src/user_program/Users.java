@@ -1,15 +1,28 @@
+import java.util.ArrayList;
+
 public class Users {
-    String name;
-    int age;
-    String hometown;
+    ArrayList<User> userList = new ArrayList<User>();
     
-    public Users(String name, int age, String hometown) {
-        name = name;
-        age = age;
-        hometown = hometown;
+    public Users() {
+        
     }
 
-    private void addUser() {
+    public void addUser(User user) {
+        userList.add(user);
+    }
+    
+    public void displayUsers() {
+        
+        for (User userData : userList) {
+            if (userData.name == null) {
+                continue;
+            }
+            System.out.println("Users: ");
+            System.out.println(userData.name);
+            System.out.println(userData.age);
+            System.out.println(userData.hometown);
+        }
+        
         return;
     }
 
