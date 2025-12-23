@@ -12,14 +12,16 @@ public class Menu {
         // Use scanner object to read user input
         String userChoice = "";
         // Execute input
-        while (userChoice != "x") {
+        while (!userChoice.equals("x")) {
+            
             // Prints user menu
             System.out.println("Menu: \n"
                     + "1. Add users\n"
                     + "2. List users\n"
                     + "3. Find users\n");
             System.out.print("Enter choice: ");
-            userChoice = sc.nextLine();
+            userChoice = sc.nextLine().strip();
+            System.out.println(userChoice);
 
             switch (userChoice) {
                 
@@ -37,7 +39,7 @@ public class Menu {
                 case "2":
                     userList.displayUsers();
                     break;
-                case "3":
+                case "x":
                     // findUsers();
                     break;
                 default:
