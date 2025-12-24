@@ -37,8 +37,14 @@ public class Menu {
                 case "2":
                     userList.displayUsers();
                     break;
-                case "x":
-                    // findUsers();
+                case "3":
+                    String usrName = "xxxxxxxxxxxx";
+                    while (!usrName.equals("x")) {
+                        System.out.print("Enter user to find (x to exit search): ");
+                        usrName = sc.nextLine().strip();
+                        userList.findUsers(usrName);
+                    }
+                    showMenu();
                     break;
                 case "m":
                     showMenu();

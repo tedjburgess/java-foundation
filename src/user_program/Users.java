@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Users {
     ArrayList<User> userList = new ArrayList<User>();
@@ -6,6 +7,11 @@ public class Users {
     public Users() {
         
     }
+
+    public static boolean isListNullOrEmpty(List<?> list) {
+        return list == null || list.isEmpty();
+    }
+
 
     public void addUser(User user) {
         userList.add(user);
@@ -28,7 +34,20 @@ public class Users {
         return;
     }
 
-    
+    public void findUsers(String usrName) {
+        userList.removeIf(u -> u.getAge() == 0);
+
+        boolean isArray = isListNullOrEmpty(userList);
+        if (isArray == true) {
+            System.out.println("List empty\n");
+            return;
+        }
+        for (User user : userList) {
+            if (user.name.equals(usrName)) {
+                System.out.println(user.getUsrData()); 
+            }
+        }
+    }
 
      
 }

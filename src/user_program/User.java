@@ -8,4 +8,19 @@ public class User {
         this.age = age;
         this.hometown = hometown;
     }
+
+    String getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    String getUsrData() {
+        return "User: \n"
+        + name + "\n"
+        + age + "\n"
+        + hometown + "\n";
+    }
 }
