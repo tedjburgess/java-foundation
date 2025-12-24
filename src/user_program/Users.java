@@ -37,6 +37,11 @@ public class Users {
     public void findUsers(String usrName) {
         userList.removeIf(u -> u.getAge() == 0);
 
+        if (usrName.equals("x")) {
+            System.out.println("");
+            return;
+        }
+
         boolean isArray = isListNullOrEmpty(userList);
         if (isArray == true) {
             System.out.println("List empty\n");
@@ -44,9 +49,11 @@ public class Users {
         }
         for (User user : userList) {
             if (user.name.equals(usrName)) {
-                System.out.println(user.getUsrData()); 
+                System.out.println(user.getUsrData());
+                return; 
             }
         }
+        System.out.println("User not found\n");
     }
 
      
