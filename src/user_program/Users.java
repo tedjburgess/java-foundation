@@ -35,8 +35,6 @@ public class Users {
     }
 
     public void findUsers(String usrName) {
-        userList.removeIf(u -> u.getAge() == 0);
-
         if (usrName.equals("x")) {
             System.out.println("");
             return;
