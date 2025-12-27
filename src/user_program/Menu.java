@@ -58,6 +58,7 @@ public class Menu {
                     break;
             }
         }
+        sc.close();
     }
 
     private static void showMenu() {
@@ -70,5 +71,6 @@ public class Menu {
                 + "c. Clear terminal\n");
         
     }
+    
 
 }
