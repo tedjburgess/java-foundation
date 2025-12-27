@@ -12,7 +12,7 @@ Features:
 - Exit program: Exit by entering an x
 
 Requirements: 
- -Java (JDK)
+-Java (JDK)
 
 How to run:
 - Navigate to micro/src/user_program
