@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Menu {
 
     public static void main(String[] args) {
-        User user = new User(null, 0, null);
         Users userList = new Users();
 
         // Create a scanner object
@@ -29,7 +28,7 @@ public class Menu {
                     int age = Integer.parseInt(sc.nextLine().strip());
                     System.out.print("Enter hometown: ");
                     String town = sc.nextLine().strip();
-                    user = new User(name, age, town);
+                    User user = new User(name, age, town);
                     userList.addUser(user);
                     System.out.println("");
                     break;
