@@ -40,14 +40,19 @@ public class Menu {
                         System.out.println("List empty");
                         break;   
                     }
+                    todoList.listTodos();
                     while (true) {
-                        todoList.listTodos();
                         System.out.print("Choose item to mark done (x to exit): ");
                         String itemNumber = scan.nextLine().strip();
-                        if (itemNumber == "x") {
+                        if (itemNumber.equals("x")) {
                             break;
                         }
+                        int removeItem = Integer.parseInt(itemNumber);
+                        todoList.markDone(removeItem);
                     }
+                    System.out.println("");
+                    System.out.println("Updated list: ");
+                    todoList.listTodos();
                     break;
                 case "4":
 

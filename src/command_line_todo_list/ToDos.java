@@ -45,4 +45,14 @@ public class ToDos {
     public int size() {
         return todoList.size();
     }
+
+    public void markDone(int updateNumber) {
+        int listItemNumber = 1;
+        for (ToDo todo : todoList) {
+            if (listItemNumber == updateNumber) {
+                todo.finishTodo(true);
+            }
+            listItemNumber += 1;
+        }
+    }
 }
