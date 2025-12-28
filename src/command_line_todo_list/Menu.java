@@ -28,7 +28,7 @@ public class Menu {
                         if (todoDescription.equals("x")) {
                             break;
                         }
-                        ToDo todoObject = new ToDo(todoName, todoDescription);
+                        ToDo todoObject = new ToDo(todoName, todoDescription, false);
                         todoList.addTodo(todoObject);
                     }
                     System.out.println("");
