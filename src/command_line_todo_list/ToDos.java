@@ -24,21 +24,35 @@ public class ToDos {
     }
 
     public void listTodos() {
+        int itemNumber = 1;
         if (todoList.size() == 0) {
             System.out.println("List empty\n");
             return;
         }
         for (ToDo todo : todoList) {
-            System.out.println(todo.getToDo());
+            System.out.println(itemNumber + "." + todo.getToDo());
+            itemNumber += 1;
         }
         return;
     }
-
 
     public void deleteTodo(String todoName) {
         MyObject todoItem = findByName(todoList, todoName);
         if (todoItem != null) {
             todoList.remove(todoItem);
+        }
+    }
+    public int size() {
+        return todoList.size();
+    }
+
+    public void markDone(int updateNumber) {
+        int listItemNumber = 1;
+        for (ToDo todo : todoList) {
+            if (listItemNumber == updateNumber) {
+                todo.finishTodo(true);
+            }
+            listItemNumber += 1;
         }
     }
 }

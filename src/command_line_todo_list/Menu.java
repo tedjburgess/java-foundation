@@ -19,7 +19,6 @@ public class Menu {
                     while (true) {
                         System.out.print("Enter todo name(x to main menu): ");
                         String todoName = scan.nextLine().strip();
-                        System.out.println(todoName);
                         if (todoName.equals("x")) {
                             break;
                         }
@@ -37,7 +36,23 @@ public class Menu {
                     todoList.listTodos();
                     break;
                 case "3":
-
+                    if (todoList.size() == 0) {
+                        System.out.println("List empty");
+                        break;   
+                    }
+                    todoList.listTodos();
+                    while (true) {
+                        System.out.print("Choose item to mark done (x to exit): ");
+                        String itemNumber = scan.nextLine().strip();
+                        if (itemNumber.equals("x")) {
+                            break;
+                        }
+                        int removeItem = Integer.parseInt(itemNumber);
+                        todoList.markDone(removeItem);
+                    }
+                    System.out.println("");
+                    System.out.println("Updated list: ");
+                    todoList.listTodos();
                     break;
                 case "4":
 

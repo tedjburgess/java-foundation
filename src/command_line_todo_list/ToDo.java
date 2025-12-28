@@ -18,9 +18,10 @@ public class ToDo {
         return "Name: " + name + statusAsii + "\n"
         + "Description: " + description + "\n";
     }
-    // public boolean finishTodo(boolean finished) {
-    //     return(finished);
-    // }
+    public boolean finishTodo(boolean finished) {
+        status = true;
+        return(finished);
+    }
     // public String getName() {
     //     return name;
     // }
