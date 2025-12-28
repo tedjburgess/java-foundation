@@ -14,15 +14,6 @@ public class ToDos {
         todoList.add(todoItem);     
     }
 
-    public MyObject findByName(List<MyObject> objects, String name) {
-        for (MyObject obj : objects) {
-            if (obj.getName().equals(name)) {
-                return obj;
-            }
-        }
-        return null; // not found
-    }
-
     public void listTodos() {
         int itemNumber = 1;
         if (todoList.size() == 0) {
@@ -36,23 +27,17 @@ public class ToDos {
         return;
     }
 
-    public void deleteTodo(String todoName) {
-        MyObject todoItem = findByName(todoList, todoName);
-        if (todoItem != null) {
-            todoList.remove(todoItem);
-        }
+    public void deleteTodo(int todoIndex) {
+        todoIndex -= 1;
+        todoList.remove(todoIndex);
     }
+    
     public int size() {
         return todoList.size();
     }
 
     public void markDone(int updateNumber) {
-        int listItemNumber = 1;
-        for (ToDo todo : todoList) {
-            if (listItemNumber == updateNumber) {
-                todo.finishTodo(true);
-            }
-            listItemNumber += 1;
-        }
+        ToDo objectDone = todoList.get(updateNumber - 1);
+        objectDone.finishTodo();
     }
 }

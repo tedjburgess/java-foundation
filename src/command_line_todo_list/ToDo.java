@@ -18,14 +18,8 @@ public class ToDo {
         return "Name: " + name + statusAsii + "\n"
         + "Description: " + description + "\n";
     }
-    public boolean finishTodo(boolean finished) {
+    public boolean finishTodo() {
         status = true;
-        return(finished);
+        return status;
     }
-    // public String getName() {
-    //     return name;
-    // }
-    // public String getDescription() {
-    //     return description;
-    // }
 }
