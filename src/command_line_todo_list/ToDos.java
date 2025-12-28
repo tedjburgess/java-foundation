@@ -23,6 +23,17 @@ public class ToDos {
         return null; // not found
     }
 
+    public void listTodos() {
+        if (todoList.size() == 0) {
+            System.out.println("List empty\n");
+            return;
+        }
+        for (ToDo todo : todoList) {
+            System.out.println(todo.getToDo());
+        }
+        return;
+    }
+
 
     public void deleteTodo(String todoName) {
         MyObject todoItem = findByName(todoList, todoName);
