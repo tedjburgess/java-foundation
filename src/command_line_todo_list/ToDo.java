@@ -8,4 +8,8 @@ public class ToDo {
         this.name = name;
         this.description = description;
     }
+    public String getToDo() {
+        return "Name: " + name + "\n"
+        + "Description: " + description + "\n";
+    }
 }
