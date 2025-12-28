@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Menu {
     public static void main(String[] args) {
         boolean exitProgram = false;
+        ToDos todoList = new ToDos();
 
         while (exitProgram == false) {
             Scanner scan = new Scanner(System.in);
@@ -28,11 +29,12 @@ public class Menu {
                             break;
                         }
                         ToDo todoObject = new ToDo(todoName, todoDescription);
+                        todoList.addTodo(todoObject);
                     }
                     System.out.println("");
                     break;
                 case "2":
-
+                    todoList.listTodos();
                     break;
                 case "3":
 
