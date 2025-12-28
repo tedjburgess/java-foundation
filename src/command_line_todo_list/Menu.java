@@ -38,7 +38,7 @@ public class Menu {
                 case "3":
                     if (todoList.size() == 0) {
                         System.out.println("List empty");
-                        break;   
+                        break;
                     }
                     todoList.listTodos();
                     while (true) {
@@ -47,18 +47,39 @@ public class Menu {
                         if (itemNumber.equals("x")) {
                             break;
                         }
-                        int removeItem = Integer.parseInt(itemNumber);
-                        todoList.markDone(removeItem);
+                        try {
+                            int doneItem = Integer.parseInt(itemNumber);
+                            todoList.markDone(doneItem);                            
+                        } catch (Exception e) {
+                            System.out.println("Error: " + e);
+                        }
+
                     }
                     System.out.println("");
                     System.out.println("Updated list: ");
                     todoList.listTodos();
                     break;
                 case "4":
-                    
-                    break;
-                case "m":
+                    if (todoList.size() == 0) {
+                        System.out.println("List empty");
+                        break;
+                    }
+                    while (true) {
+                        todoList.listTodos();
+                        System.out.print("Remove #: ");
+                        String removeNumber = scan.nextLine().strip();
+                        System.out.println("x to exit");
+                        if (removeNumber.equals("x")) {
+                            break;
+                        }
+                        try {
+                            int remove = Integer.parseInt(removeNumber);
+                            todoList.deleteTodo(remove);                            
+                        } catch (Exception e) {
+                            System.out.println("Error: " + e);
+                        }
 
+                    }
                     break;
                 case "x":
                     exitProgram = true;
@@ -77,7 +98,6 @@ public class Menu {
                 + "2. Show todo list\n"
                 + "3. Mark todo as done\n"
                 + "4. Delete a todo\n"
-                + "m. Show menu\n"
                 + "x. Exit\n");
     }
 
