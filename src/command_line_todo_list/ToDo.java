@@ -12,4 +12,10 @@ public class ToDo {
         return "Name: " + name + "\n"
         + "Description: " + description + "\n";
     }
+    // public String getName() {
+    //     return name;
+    // }
+    // public String getDescription() {
+    //     return description;
+    // }
 }

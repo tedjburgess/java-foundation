@@ -8,4 +8,8 @@ public class ToDos {
     public ToDos() {
         this.todoList = new ArrayList<ToDo>();
     }
+
+    public void addTodo(ToDo todoItem) {
+        todoList.add(todoItem);     
+    }
 }
