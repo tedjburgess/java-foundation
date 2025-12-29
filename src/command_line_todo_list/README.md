@@ -20,7 +20,7 @@ progressively more difficult backend projects
 
 ## How to run
 
-- Navigate to java-foundation/src/command_line_todo_list
+- Navigate to src/command_line_todo_list
 
 - Run
 ```bash
