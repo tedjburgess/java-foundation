@@ -21,12 +21,12 @@ Features:
 
 ## How to run:
 
-- Navigate src/user_program
+- Navigate src
 
 -Run
 ```bash
-javac *.java
-java Menu
+javac user_program/*.java
+java java user_program.Menu
 ```
 
 ## What I Learned: 

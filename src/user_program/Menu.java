@@ -1,3 +1,5 @@
+package user_program;
+
 import java.util.Scanner;
 
 public class Menu {

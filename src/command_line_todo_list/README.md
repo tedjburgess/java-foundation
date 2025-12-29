@@ -20,12 +20,12 @@ progressively more difficult backend projects
 
 ## How to run
 
-- Navigate to src/command_line_todo_list
+- Navigate to src
 
 - Run
 ```bash
-javac *.java
-java Menu
+javac command_line_todo_list/*.java
+java command_line_todo_list.Menu
 ```
 
 ## What I learned

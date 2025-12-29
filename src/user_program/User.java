@@ -1,3 +1,5 @@
+package user_program;
+
 public class User {
     String name;
     int age;
