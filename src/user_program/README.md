@@ -26,7 +26,7 @@ Features:
 -Run
 ```bash
 javac user_program/*.java
-java java user_program.Menu
+java user_program.Menu
 ```
 
 ## What I Learned: 
