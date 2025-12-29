@@ -6,9 +6,10 @@ public class Menu {
     public static void main(String[] args) {
         boolean exitProgram = false;
         ToDos todoList = new ToDos();
-
+        Scanner scan = new Scanner(System.in);
+        
         while (exitProgram == false) {
-            Scanner scan = new Scanner(System.in);
+            
             menu();
             System.out.print("Enter choice: ");
             String usrInput = scan.nextLine().strip();
@@ -49,7 +50,7 @@ public class Menu {
                         }
                         try {
                             int doneItem = Integer.parseInt(itemNumber);
-                            todoList.markDone(doneItem);                            
+                            todoList.markDone(doneItem);
                         } catch (Exception e) {
                             System.out.println("Error: " + e);
                         }
@@ -66,15 +67,16 @@ public class Menu {
                     }
                     while (true) {
                         todoList.listTodos();
+                        System.out.println("x to exit");
                         System.out.print("Remove #: ");
                         String removeNumber = scan.nextLine().strip();
-                        System.out.println("x to exit");
+                        System.out.println("");
                         if (removeNumber.equals("x")) {
                             break;
                         }
                         try {
                             int remove = Integer.parseInt(removeNumber);
-                            todoList.deleteTodo(remove);                            
+                            todoList.deleteTodo(remove);
                         } catch (Exception e) {
                             System.out.println("Error: " + e);
                         }

@@ -5,13 +5,13 @@ import java.util.List;
 
 public class ToDos {
     ArrayList<ToDo> todoList;
-    
+
     public ToDos() {
         this.todoList = new ArrayList<ToDo>();
     }
 
     public void addTodo(ToDo todoItem) {
-        todoList.add(todoItem);     
+        todoList.add(todoItem);
     }
 
     public void listTodos() {
@@ -31,7 +31,7 @@ public class ToDos {
         todoIndex -= 1;
         todoList.remove(todoIndex);
     }
-    
+
     public int size() {
         return todoList.size();
     }
