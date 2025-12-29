@@ -83,6 +83,15 @@ public class Menu {
 
                     }
                     break;
+                case "5":
+                    if (todoList.size() == 0) {
+                        System.out.println("List empty");
+                        break;
+                    }
+                    System.out.print("Enter filename: ");
+                    String filename = scan.nextLine();
+                    todoList.saveFile(filename + ".txt");                    
+                    break;    
                 case "x":
                     exitProgram = true;
                     System.out.println("Thank you for using the list " + "🙂");
@@ -100,6 +109,7 @@ public class Menu {
                 + "2. Show todo list\n"
                 + "3. Mark todo as done\n"
                 + "4. Delete a todo\n"
+                + "5. Save list to file\n"
                 + "x. Exit\n");
     }
 

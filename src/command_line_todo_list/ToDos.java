@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ToDos {
     ArrayList<ToDo> todoList;
+    FileIO saver = new FileIO();
 
     public ToDos() {
         this.todoList = new ArrayList<ToDo>();
@@ -39,5 +40,14 @@ public class ToDos {
     public void markDone(int updateNumber) {
         ToDo objectDone = todoList.get(updateNumber - 1);
         objectDone.finishTodo();
+    }
+
+    public void saveFile(String filename) {
+        
+        String fileString = "";
+        for (ToDo todo : todoList) {
+            fileString += todo.getToDo();        
+        }
+        saver.write(fileString, filename);
     }
 }
