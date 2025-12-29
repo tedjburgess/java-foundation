@@ -1,8 +1,8 @@
-# Command Line Todo List
+# Project 1 - Command Line Todo List
 
 ## Description
 
-This is project 2 of my java foundation
+This is project 1 of my java foundation
 projects to improve my java skills and build
 progressively more difficult backend projects
 
