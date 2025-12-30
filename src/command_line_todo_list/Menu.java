@@ -91,6 +91,11 @@ public class Menu {
                     System.out.print("Enter filename: ");
                     String filename = scan.nextLine();
                     todoList.saveFile(filename + ".txt");                    
+                    break;
+                case "6":
+                    System.out.print("Enter filename: ");
+                    String nameOfFile = scan.nextLine().strip();
+                    todoList.loadFile(nameOfFile + ".txt");                    
                     break;    
                 case "x":
                     exitProgram = true;
@@ -110,6 +115,7 @@ public class Menu {
                 + "3. Mark todo as done\n"
                 + "4. Delete a todo\n"
                 + "5. Save list to file\n"
+                + "6. Load from file\n"
                 + "x. Exit\n");
     }
 
