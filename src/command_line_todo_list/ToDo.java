@@ -24,4 +24,16 @@ public class ToDo {
         status = true;
         return status;
     }
+
+    public String getName() {
+        return name;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    public boolean getStatus() {
+        return status;
+    }
 }

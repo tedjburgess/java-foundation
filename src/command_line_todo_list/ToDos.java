@@ -1,6 +1,7 @@
 package command_line_todo_list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ToDos {
@@ -45,9 +46,35 @@ public class ToDos {
     public void saveFile(String filename) {
         
         String fileString = "";
+        int currentTodo = 0;
         for (ToDo todo : todoList) {
-            fileString += todo.getToDo();        
+            if (currentTodo == todoList.size() - 1) {
+                fileString += todo.getName() + "|" + todo.getDescription() + "|" + todo.getStatus();
+                break;    
+            }
+            fileString += todo.getName() + "|" + todo.getDescription() + "|" + todo.getStatus() + "|" + "\n";
+            currentTodo += 1;        
         }
         saver.write(fileString, filename);
+    }
+
+    public void loadFile(String filename) {
+        String data = saver.read(filename);
+        String[] dataArray = data.split("\\|");
+        //Removes whitespace
+        for (int i = 0; i < dataArray.length; i++) {
+            dataArray[i] = dataArray[i].trim();
+        }
+        System.out.println(Arrays.toString(dataArray));
+        System.out.println("");
+        int arraySize = dataArray.length;
+        int firstObjectIndex = 0;
+        int lastObjectIndex = 3;
+        while (lastObjectIndex <= arraySize) {
+            String[] objectParam = Arrays.copyOfRange(dataArray, firstObjectIndex, lastObjectIndex);
+            firstObjectIndex += 3;
+            lastObjectIndex += 3;
+            System.out.println(Arrays.toString(objectParam));
+        }
     }
 }

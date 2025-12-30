@@ -1,6 +1,8 @@
 package command_line_todo_list;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 public class FileIO {
@@ -17,5 +19,22 @@ public class FileIO {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }        
+    }
+    
+    public String read(String filename) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(filename));
+            String line;
+            String data = "";
+            while ((line = reader.readLine()) != null) {
+                data += line + "\n";
+            }
+            reader.close();
+            return data;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "Could not load file";
+        
+    }
 }
