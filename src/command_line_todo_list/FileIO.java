@@ -30,6 +30,7 @@ public class FileIO {
                 data += line + "\n";
             }
             reader.close();
+            System.out.println("File loaded successfully\n");
             return data;
         } catch (Exception e) {
             e.printStackTrace();

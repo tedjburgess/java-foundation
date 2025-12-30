@@ -65,8 +65,6 @@ public class ToDos {
         for (int i = 0; i < dataArray.length; i++) {
             dataArray[i] = dataArray[i].trim();
         }
-        System.out.println(Arrays.toString(dataArray));
-        System.out.println("");
         int arraySize = dataArray.length;
         int firstObjectIndex = 0;
         int lastObjectIndex = 3;
@@ -74,7 +72,12 @@ public class ToDos {
             String[] objectParam = Arrays.copyOfRange(dataArray, firstObjectIndex, lastObjectIndex);
             firstObjectIndex += 3;
             lastObjectIndex += 3;
-            System.out.println(Arrays.toString(objectParam));
+            try {
+                ToDo todo = new ToDo(objectParam[0], objectParam[1], Boolean.parseBoolean(objectParam[2]));
+                todoList.add(todo);
+            } catch (Exception e) {
+                System.out.println("Error " + e);
+            }
         }
     }
 }
