@@ -2,9 +2,9 @@
 
 ## Description
 
-This is project 1 of my java foundation
-projects to improve my java skills and build
-progressively more difficult backend projects
+This is Project 1 of my Java foundation projects to 
+improve my Java skills and build progressively more 
+difficult backend projects
 
 ## Features
 
@@ -40,11 +40,10 @@ java command_line_todo_list.Menu
 
 ## Description
 
-This project was a continuation of project 1. This
-project involved adding functionality that allowed 
-writing to and reading from files. In the todo list
-you can now save a list and load the list from the 
-saved file.
+This project was a continuation of Project 1. This 
+phase added functionality that allows writing to and 
+reading from files. The todo list can now be saved 
+to a file and loaded back into the program.
 
 ## Features
 
