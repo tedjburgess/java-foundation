@@ -38,7 +38,7 @@ java command_line_todo_list.Menu
 
 # Project 2 - Cammand Line Todo List extension
 
-##
+## Description
 
 This project was a continuation of project 1. This
 project involved adding functionality that allowed 
